@@ -3,17 +3,18 @@ class DonutMaker{
         numDonut= 0;
         numAutoClicker = 0;
         autoCost = 100;
-        autoCostMulti = 1.1;
+        donutMultiCount = 0;
+        donutMultiCost = 10;
     }
     
     addDonuts(){
-        this.numDonut++;
+        this.numDonut+=Math.pow(1.2,this.donutMultiCount);
     }
     get donutCount(){
         return this.numDonut;
     }
     AutoClickerCost(){
-        autoCost *= this.autoCostMulti; 
+        autoCost *= 1.1; 
     }
     addAutoClicker(){
         if(this.numDonut>=this.autoCost){
@@ -28,7 +29,22 @@ class DonutMaker{
         return this.numAutoClicker;
     }
     autoClickerEvent(){
-        this.numDonut+=this.numAutoClicker;
+        this.numDonut+=this.numAutoClicker*Math.pow(1.2*this.donutMultiCount);
+    }
+    get donutMultiplier(){
+        return this.donutMultiCount;
+    }
+    increaseDonutMultiplier(){
+        if(this.numDonut>=this.donutMultiCost){
+            this.numDonut-=Math.floor(this.donutMultiCost);
+            this.donutMultiCount++;
+            this.increaseDonutMultiCost();
+        } else {
+            console.log("not enough donuts to purchase");
+        }
+    }
+    increaseDonutMultiCost(){
+        this.donutMultiCost*=1.1;
     }
 
 }
