@@ -5,32 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donut Clicker</title>
+    <link rel="stylesheet" href="./resources/css/style.css">
   </head>
   <body>
     <div class="container">
       <header class="header">
         <h1 id="header_title">Donut Maker</h1>
-        <nav id="header-nav">
-          <button id="fred-baker">Fred the Baker Baking Company</button>
-            <p class="fred-content">information when fred button is clicked</p>
+        <nav id="header_nav">
+          <button id="fred_baker">Fred the Baker Baking Company</button>
+            <p class="fred_content">information when fred button is clicked</p>
           <button id="inspiration">The Inspiration</button>
-            <p class="inspiration-content">info when inspiration button is clicked</p>
+            <p class="inspiration_content">info when inspiration button is clicked</p>
           <button id="contact">Contact Info</button>
-            <p class="contact-content">info for contact button</p>
+            <p class="contact_content">info for contact button</p>
         </nav>
       </header>
       <section id="main">
         <section id="click">
-
+          <h2 class="donutClick_header">Lets Make Some Donuts!</h2>
+          <button class="donut_button">CLICK ME!!!!</button>
+          <section class="game_stats">
+            <p class="donut_count"></p>
+          </section>
         </section>
-        <section id="auto-click">
-
+        <section id="auto_click">
+          <h2 class="autoClicker_header">Auto-Clickers</h2>
+          <button class="buy_autoClicker">Buy</button>
+          <p class="auto_count"></p>
         </section>
-        <section id="click-multiplier">
-
+        <section id="click_multiplier">
+          <h2 class="click_multiplier_header">Click Multipliers</h2>
+          <button class="buy_multiplier">Buy</button>
+          <p class="multi_count"></p>
         </section>
       </section>
     </div>
-    <script src="./index.js"></script>
+    <script type="module" src="./donut-maker-app.js"></script>
   </body>
 </html>
