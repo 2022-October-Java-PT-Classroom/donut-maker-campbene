@@ -1,0 +1,12 @@
+.fred_content{
+    display: none;
+}
+.inspiration_content{
+    display: none;
+}
+.contact_content{
+    display: none;
+}
+.show{
+    display: block;
+}
