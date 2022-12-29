@@ -9,18 +9,33 @@
   </head>
   <body>
     <div class="container">
-      <header class="header">
-        <h1 id="header_title">Donut Maker</h1>
-        <nav id="header_nav">
+      <header id="header">
+        <h1 class="header_title">Donut Maker</h1>
+        <nav class="header_nav">
           <button id="fred_baker">Fred the Baker Baking Company</button>
-            <p class="fred_content">Welcome to Fred the Baker Baking Company! How many donuts can you make and how efficiently can you make them? Start clicking now!</p>
+          <div id="fred_modal" class="modal">
+            <div id="fred_modal_content" class="modal_content">
+              <span class="fred_close close">&times;</span>
+              <p class="fred_content">Welcome to Fred the Baker Baking Company! How many donuts can you make and how efficiently can you make them? Start clicking now!</p>
+            </div>
+          </div>
           <button id="inspiration">The Inspiration</button>
-            <p class="inspiration_content">The inspiration: <a href="https://orteil.dashnet.org/cookieclicker/" class="cookie">Cookie Clicker</a></p>
+          <div id="insp_modal" class="modal">
+            <div id="insp_modal_content" class="modal_content">
+              <span class="insp_close close">&times;</span>
+              <p class="inspiration_content">The inspiration: <a href="https://orteil.dashnet.org/cookieclicker/" class="cookie">Cookie Clicker</a></p>
+            </div>
+          </div>
           <button id="contact">Contact Info</button>
-            <ul class="contact_content">
-              <li><a href="https://campbene.github.io" class="portfolio">My Portfolio</a></li>
-              <li><a href="https://github.com/campbene" class="git_link">My Github</a></li>
-            </ul>
+          <div id="contact_modal" class="modal">
+            <div id="contact_modal_content" class="modal_content">
+              <span class="contact_close close">&times;</span>
+              <ul class="contact_content">
+                <li><a href="https://campbene.github.io" class="portfolio">My Portfolio</a></li>
+                <li><a href="https://github.com/campbene" class="git_link">My Github</a></li>
+              </ul>
+            </div>
+          </div>
         </nav>
       </header>
       <section id="main">
@@ -29,6 +44,7 @@
           <button class="donut_button">CLICK ME TO MAKE DONUTS!!!!</button>
           <section class="donut_stats">
             <p class="donut_count"></p>
+            <p class="multiplier_value"></p>
           </section>
         </section>
         <section id="auto_click">

@@ -5,6 +5,7 @@ class DonutMaker {
     this.autoCost = 100;
     this.donutMultiCount = 0;
     this.donutMultiCost = 10;
+    this.multiplierValue = 0;
   }
 
   addDonuts() {
@@ -46,6 +47,10 @@ class DonutMaker {
   }
   increaseDonutMultiCost() {
     this.donutMultiCost *= 1.1;
+  }
+  get multiplier(){
+    this.multiplierValue = Math.pow(1.2,this.donutMultiCount);
+    return this.multiplierValue;
   }
 
   resetGame() {

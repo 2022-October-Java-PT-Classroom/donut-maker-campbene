@@ -6,18 +6,91 @@
     padding: 0;
 }
 body{
-    background-color: wheat;
+    background: url(../images/donut-background.jpg) no-repeat center center fixed;
 }
 html{
     color: #000;
     font: 18px/1.618 sans-serif;
     font-family: 'Lato', sans-serif;
 }
+.container{
+    background-color: wheat;
+    background-size: cover;
+    margin: 2.5rem auto;
+    max-width: 60rem;
+    width: 90%;
+    -webkit-box-shadow: 0px 3px 37px -14px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 3px 37px -14px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 37px -14px rgba(0,0,0,0.75);
+}
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_title{
+    margin: 1rem 0;
+    font-style: bold;
+}
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .5rem 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    background: #333;
+    z-index: 1;
+}
+nav button{
+    display: flex;
+    flex-flow: row;
+}
+ul{
+    list-style-type: none;
+}
 a{
-    color: #3877a0;
+    color: #1999ee;
     padding: 0 .5rem;
     text-decoration: none;
 }
+
+.modal {
+    display: none;
+    position: fixed; 
+    z-index: 1;
+    justify-content: center;
+    top: 0;
+    width: 50%; 
+    height: 100%; 
+    overflow: auto;
+  }
+  .modal_content {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    background-color: white;
+    margin: 15% auto;
+    padding: .25rem 1rem;
+    border: 1px solid #888;
+    width: 80%; 
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
 
 .buy_autoClicker{
     background-color: grey;
@@ -29,15 +102,24 @@ a{
     background-color: white;
 }
 
-.fred_content{
-    display: none;
+#main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 2rem;
+    grid-column-gap: .5rem;
 }
-.inspiration_content{
-    display: none;
+#click{
+    grid-column-start: 1;
+    grid-row: 2 / span 2;
+    align-items: center;
 }
-.contact_content{
-    display: none;
+#auto_click{
+    grid-column: 2;
 }
-.show{
-    display: block;
+#click_multiplier{
+    grid-column: 2;
+}
+#reset{
+    grid-column: 2;
 }
