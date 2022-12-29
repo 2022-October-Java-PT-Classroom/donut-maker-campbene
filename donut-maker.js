@@ -11,10 +11,11 @@ class DonutMaker {
     this.numDonut += Math.pow(1.2, this.donutMultiCount);
   }
   get donutCount() {
-    return this.numDonut;
+    return this.numDonut.toFixed(0);
   }
   AutoClickerCost() {
     this.autoCost *= 1.1;
+    this.autoCost.toFixed(0);
   }
   addAutoClicker() {
     if (this.numDonut >= this.autoCost) {
@@ -45,6 +46,14 @@ class DonutMaker {
   }
   increaseDonutMultiCost() {
     this.donutMultiCost *= 1.1;
+  }
+
+  resetGame() {
+    this.numDonut = 0;
+    this.numAutoClicker = 0;
+    this.autoCost = 100;
+    this.donutMultiCount = 0;
+    this.donutMultiCost = 10;
   }
 }
 
