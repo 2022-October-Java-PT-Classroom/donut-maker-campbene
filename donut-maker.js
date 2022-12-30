@@ -4,8 +4,10 @@ class DonutMaker {
     this.numAutoClicker = 0;
     this.autoCost = 100;
     this.donutMultiCount = 0;
-    this.donutMultiCost = 10;
+    this.donutMultiCost = 50;
     this.multiplierValue = 0;
+    this.newDonutCost = 500;
+    this.newDonutCount = 0;
   }
 
   addDonuts() {
@@ -53,12 +55,36 @@ class DonutMaker {
     return this.multiplierValue;
   }
 
+  randomEvent() {
+    this.numDonut+=(10+Math.floor(Math.random()*101))*Math.pow(1.2,this.donutMultiCount);
+  }
+  
+  get getNewDonutCost() {
+    return this.newDonutCost;
+  }
+  
+  increaseNewDonutCost() {
+    this.newDonutCost *= 5;
+  }
+
+  makeNewDonuts() {
+    if (this.numDonut >= this.newDonutCost) {
+      this.numDonut -= Math.floor(this.newDonutCost);
+      this.newDonutCount++;
+      this.increaseNewDonutCost();
+    } else {
+      console.log("not enough donuts to purchase");
+    }
+  }
+
   resetGame() {
     this.numDonut = 0;
     this.numAutoClicker = 0;
     this.autoCost = 100;
     this.donutMultiCount = 0;
-    this.donutMultiCost = 10;
+    this.donutMultiCost = 50;
+    this.newDonutCost = 500;
+    this.newDonutCount = 0;
   }
 }
 

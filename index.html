@@ -16,7 +16,7 @@
           <div id="fred_modal" class="modal">
             <div id="fred_modal_content" class="modal_content">
               <span class="fred_close close">&times;</span>
-              <p class="fred_content">Welcome to Fred the Baker Baking Company! How many donuts can you make and how efficiently can you make them? Start clicking now!</p>
+              <p class="fred_content">Welcome to Fred the Baker Baking Company! How many donuts can you make and how efficiently can you make them? Can you make them all? Start clicking now!</p>
             </div>
           </div>
           <button id="inspiration">The Inspiration</button>
@@ -40,11 +40,10 @@
       </header>
       <section id="main">
         <section id="click">
-          <h2 class="donutClick_header">Lets Make Some Donuts!</h2>
-          <button class="donut_button">CLICK ME TO MAKE DONUTS!!!!</button>
+          <h2 class="donutClick_header">Click the Donut!</h2>
+          <button class="donut_button"><img class="donut_img" src="./resources/images/donut.jpg" alt=""></button>
           <section class="donut_stats">
             <p class="donut_count"></p>
-            <p class="multiplier_value"></p>
           </section>
         </section>
         <section id="auto_click">
@@ -52,7 +51,6 @@
           <button class="buy_autoClicker">Buy</button>
           <section class="auto_clicker_stats">
             <p class="auto_count"></p>
-            <p class="auto_cost"></p>
           </section>
         </section>
         <section id="click_multiplier">
@@ -60,13 +58,30 @@
           <button class="buy_multiplier">Buy</button>
           <section class="multiplier_stats">
             <p class="multi_count"></p>
-            <p class="multi_cost"></p>
           </section>
         </section>
         <section id="reset">
           <h2 class="reset_header">Reset Game</h2>
-          <button class="reset_button">Reset</button>
+          <button class="reset_button button">Reset</button>
         </section>
+        <section id="rand_event">
+          <button class="rand_button button"><img class="rand_img" src="./resources/images/donut.jpg" alt=""></button>
+        </section>
+      </section>
+      <section id="cosmetics">
+        <h2 class="cosmetic_header">New Donuts!</h2>
+        <button class="new_donut">Make New Donuts</button>
+        <p class="new_donut_cost"></p>
+        <ul class="donut_list">
+          <li class="pink_frosting"><img src="./resources/images/pink-frosting.jpg" alt="" class="pink_img"></li>
+          <li class="cruller"><img src="./resources/images/cruller.jfif" alt="" class="cruller_img"></li>
+          <li class="glazed"><img src="./resources/images/glazed-donut.jpg" alt="" class="glazed_img"></li>
+          <li class="maple"><img src="./resources/images/maple-donut.jpg" alt="" class="maple_img"></li>
+          <li class="cake"><img src="./resources/images/cake-donut.jpg" alt="" class="cake_img"></li>
+          <li class="cinnamon"><img src="./resources/images/cinnamon-donut.jpg" alt="" class="cinnamon_img"></li>
+          <li class="jelly"><img src="./resources/images/jelly-donut.jpg" alt="" class="jelly_img"></li>
+          <li class="fancy"><img src="./resources/images/fancy-donut.jpg" alt="" class="fancy_img"></li>
+        </ul>
       </section>
     </div>
     <script type="module" src="./donut-maker-app.js"></script>

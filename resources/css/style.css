@@ -17,16 +17,20 @@ html{
     background-color: wheat;
     background-size: cover;
     margin: 2.5rem auto;
+    padding-bottom: 2rem;
     max-width: 60rem;
     width: 90%;
     -webkit-box-shadow: 0px 3px 37px -14px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 3px 37px -14px rgba(0,0,0,0.75);
     box-shadow: 0px 3px 37px -14px rgba(0,0,0,0.75);
+    border-radius: .25rem;
 }
 #header{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-decoration: underline;
+    color: blueviolet;
 }
 .header_title{
     margin: 1rem 0;
@@ -47,6 +51,18 @@ nav{
 nav button{
     display: flex;
     flex-flow: row;
+    background-color: rgb(193, 193, 193);
+    border: black solid 2px;
+    border-radius: .25rem;
+    color: black;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+nav button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 ul{
     list-style-type: none;
@@ -66,8 +82,8 @@ a{
     width: 50%; 
     height: 100%; 
     overflow: auto;
-  }
-  .modal_content {
+}
+.modal_content {
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -76,30 +92,19 @@ a{
     padding: .25rem 1rem;
     border: 1px solid #888;
     width: 80%; 
-  }
-  .close {
+}
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
     margin-right: 1rem;
-  }
-  .close:hover,
-  .close:focus {
+}
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
-
-
-.buy_autoClicker{
-    background-color: grey;
-}
-.buy_multiplier{
-    background-color: grey;
-}
-.available_button{
-    background-color: white;
 }
 
 #main{
@@ -108,18 +113,178 @@ a{
     grid-template-rows: 1fr 1fr 1fr;
     margin: 0 2rem;
     grid-column-gap: .5rem;
+    grid-row-gap: .5rem;
+    text-align: center;
+}
+h2{
+    color: springgreen;
 }
 #click{
     grid-column-start: 1;
-    grid-row: 2 / span 2;
+    grid-row: 1 / span 3;
     align-items: center;
+    background: url(../images/texture-background.jpg);
+    border-radius: .25rem;
+    padding-bottom: 2rem;
+}
+.donut_button{
+    background: none;
+    border: none;
+    margin: 0 4rem;
+    cursor: pointer;
+}
+.donut_button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.donut_img{
+    height: auto;
+    max-width: 100%;
+    border: #000 solid 2px;
+    border-radius: .25rem;
 }
 #auto_click{
     grid-column: 2;
+    background: url(../images/texture-background.jpg);
+    padding-bottom: .5rem;
+    border-radius: .25rem;
 }
 #click_multiplier{
     grid-column: 2;
+    background: url(../images/texture-background.jpg);
+    border-radius: .25rem;
 }
 #reset{
     grid-column: 2;
+    text-align: center;
+    background: url(../images/texture-background.jpg);
+    border-radius: .25rem;
+}
+.reset_button{
+    background-color: #4CAF50;
+    border: black solid 2px;
+    border-radius: .25rem;
+    color: white;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+.reset_button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.buy_autoClicker{
+    background-color: grey;
+    border: black solid 2px;
+    border-radius: .25rem;
+    color: white;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.buy_multiplier{
+    background-color: grey;
+    border: black solid 2px;
+    border-radius: .25rem;
+    color: white;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+.available_button{
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+.available_button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.rand_button{
+    display: none;
+    background: none;
+    border: none;
+    z-index: 1;
+    position: fixed;
+    bottom: 50%;
+    left: 48.5%;
+    width: 50px;
+    cursor: pointer;
+}
+.rand_button:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.rand_img{
+    height: auto;
+    max-width: 100%;
+    border: #000 solid 2px;
+    border-radius: .25rem;
+}
+
+#cosmetics{
+    text-align: center;
+    background: url(../images/texture-background.jpg);
+    margin: 0 2rem;
+    padding-bottom: 2rem;
+    border-radius: .25rem;
+}
+.donut_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.new_donuts{
+    background-color: #4CAF50;
+    border: black solid 2px;
+    border-radius: .25rem;
+    color: white;
+    padding: .25rem .5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;;
+    cursor: pointer;
+}
+ul li img{
+    display: none;
+    max-width: 150px;
+    height: auto;
+    border-radius: .25rem;
+}
+.new_donut{
+    background-color: grey;
+    border: black solid 2px;
+    border-radius: .25rem;
+    color: white;
+    padding: .25rem .5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+.new_donut_available{
+    background-color: #4CAF50;
+    cursor: pointer;
+}
+.new_donut_available:hover{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#main section section p{
+    background-color: rgb(64, 178, 245);
+    margin: 0 4rem;
+    border: #000 solid 2px;
+    border-radius: .25rem;
+}
+#cosmetics p{
+    background-color: rgb(64, 178, 245);
+    margin: 0 10rem;
+    border: #000 solid 2px;
+    border-radius: .25rem;
 }
