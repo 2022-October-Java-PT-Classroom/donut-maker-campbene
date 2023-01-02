@@ -6,7 +6,7 @@ class DonutMaker {
     this.donutMultiCount = 0;
     this.donutMultiCost = 50;
     this.multiplierValue = 0;
-    this.newDonutCost = 500;
+    this.newDonutCost = 50;
     this.newDonutCount = 0;
   }
 

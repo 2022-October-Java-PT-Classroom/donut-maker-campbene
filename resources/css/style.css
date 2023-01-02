@@ -251,8 +251,13 @@ h2{
     font-size: 12px;;
     cursor: pointer;
 }
+#cosmetics ul li{
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+    color: white;
+}
 ul li img{
-    display: none;
     max-width: 150px;
     height: auto;
     border-radius: .25rem;

@@ -20,14 +20,14 @@ const randomButton = document.querySelector(".rand_button");
 const audio = new Audio("./resources/sounds/click-sound.WAV");
 const newDonutButton = document.querySelector(".new_donut");
 const newDonutCostDisp = document.querySelector(".new_donut_cost");
-const pinkImg = document.querySelector(".pink_img");
-const crullerImg = document.querySelector(".cruller_img");
-const glazedImg = document.querySelector(".maple_img");
-const mapleImg = document.querySelector(".maple_img");
-const cakeImg = document.querySelector(".cake_img");
-const cinnamonImg = document.querySelector(".cinnamon_img");
-const jellyImg = document.querySelector(".jelly_img");
-const fancyImg = document.querySelector(".fancy_img");
+const pinkFrosting = document.querySelector(".pink_frosting");
+const cruller = document.querySelector(".cruller");
+const glazed = document.querySelector(".glazed");
+const maple = document.querySelector(".maple");
+const cake = document.querySelector(".cake");
+const cinnamon = document.querySelector(".cinnamon");
+const jelly = document.querySelector(".jelly");
+const fancy = document.querySelector(".fancy");
 
 //Nav Menu Control
 navButtonFred.onclick = function () {
@@ -76,14 +76,14 @@ function updateView() {
     "Number of Auto-Clickers: " +
     appDonutMaker.numAutoClicker +
     "<br>Cost for next Auto-Clicker: " +
-    appDonutMaker.autoCost.toFixed(2) +
+    appDonutMaker.autoCost.toFixed(0) +
     " Donuts";
 
   multiplierCount.innerHTML =
     "Number of Multipliers: " +
     appDonutMaker.donutMultiCount +
     "<br>Cost for next click multiplier: " +
-    appDonutMaker.donutMultiCost.toFixed(2) + " Donuts";
+    appDonutMaker.donutMultiCost.toFixed(0) + " Donuts";
 
   newDonutCostDisp.innerHTML = "Cost to make new donuts: " + appDonutMaker.newDonutCost;
 
@@ -125,21 +125,21 @@ function updateView() {
 
   // logic to add new donuts
   if(appDonutMaker.newDonutCount>=1){
-    pinkImg.style.display = "block";
+    pinkFrosting.style.visibility = "visible";
     if(appDonutMaker.newDonutCount>=2){
-      crullerImg.style.display = "block";
+      cruller.style.visibility = "visible";
       if(appDonutMaker.newDonutCount>=3) {
-        glazedImg.style.display = "block";
+        glazed.style.visibility = "visible";
         if(appDonutMaker.newDonutCount>=4) {
-          mapleImg.style.display = "block";
+          maple.style.visibility = "visible";
           if(appDonutMaker.newDonutCount>=5) {
-            cakeImg.style.display = "block";
+            cake.style.visibility = "visible";
             if(appDonutMaker.newDonutCount>=6) {
-              cinnamonImg.style.display = "block";
+              cinnamon.style.visibility = "visible";
               if(appDonutMaker.newDonutCount>=7) {
-                jellyImg.style.display = "block";
+                jelly.style.visibility = "visible";
                 if(appDonutMaker.newDonutCount>=8) {
-                  fancyImg.style.display = "block";
+                  fancy.style.visibility = "visible";
                 }
               }
             }
