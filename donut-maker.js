@@ -6,7 +6,7 @@ class DonutMaker {
     this.donutMultiCount = 0;
     this.donutMultiCost = 50;
     this.multiplierValue = 0;
-    this.newDonutCost = 50;
+    this.newDonutCost = 500;
     this.newDonutCount = 0;
   }
 
@@ -33,7 +33,7 @@ class DonutMaker {
     return this.numAutoClicker;
   }
   autoClickerEvent() {
-    this.numDonut += this.numAutoClicker*(Math.pow(1.2,this.donutMultiCount));
+    this.numDonut += this.numAutoClicker * Math.pow(1.2, this.donutMultiCount);
   }
   get donutMultiplier() {
     return this.donutMultiCount;
@@ -50,19 +50,21 @@ class DonutMaker {
   increaseDonutMultiCost() {
     this.donutMultiCost *= 1.1;
   }
-  get multiplier(){
-    this.multiplierValue = Math.pow(1.2,this.donutMultiCount);
+  get multiplier() {
+    this.multiplierValue = Math.pow(1.2, this.donutMultiCount);
     return this.multiplierValue;
   }
 
   randomEvent() {
-    this.numDonut+=(10+Math.floor(Math.random()*101))*Math.pow(1.2,this.donutMultiCount);
+    this.numDonut +=
+      (10 + Math.floor(Math.random() * 101)) *
+      Math.pow(1.2, this.donutMultiCount);
   }
-  
+
   get getNewDonutCost() {
     return this.newDonutCost;
   }
-  
+
   increaseNewDonutCost() {
     this.newDonutCost *= 5;
   }
